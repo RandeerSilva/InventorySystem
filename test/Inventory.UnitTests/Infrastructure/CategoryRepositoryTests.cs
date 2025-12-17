@@ -32,7 +32,7 @@ namespace Inventory.UnitTests.Infrastructure
         {
             // Arrange
             using var context = CreateInMemoryContext();
-            var category = new CategoryBuilder().Build()
+            var category = new CategoryBuilder().Build();
             context.Categories.Add(category);
             await context.SaveChangesAsync();
             var repo = new CategoryRepository(context);
